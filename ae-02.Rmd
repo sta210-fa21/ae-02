@@ -52,12 +52,29 @@ There appears to be one day with a very small number of bike rentals. What was t
 
 ## Exercise 3
 
-Next, let's look at how the daily bike rentals differ by season. Visualize the distribution of daily bike rentals by season. Compare and contrast the distributions. Is this what you expected? Why or why not?
+Next, let's look at how the daily bike rentals differ by season. Let's visualize the distribution of bike rentals by season using density plots. You can think of a density plot as a "smoothed out histogram".  Compare and contrast the distributions. Is this what you expected? Why or why not?
+
+```{r}
+ggplot(data = bikeshare, aes(x = count, fill = season)) + 
+  geom_density() + 
+  labs(x = "Daily Bike Rentals", 
+       title = "Distribution of daily bike rentals in DC", 
+       subtitle = "_________")
+```
 
 
 ## Exercise 4
 
-Let's look at the relationship between the temperature in degrees Celsius (`temp_orig`) and the number of bike rentals (`count`). Make a scatterplot to visualize the relationship between these two variables.
+Let's look at the relationship between the temperature in degrees Celsius (`temp_orig`) and the number of bike rentals (`count`). Make a scatterplot to visualize the relationship between these two variables. (Remove `eval = FALSE` from the code chunk header.)
+
+```{r, eval = FALSE}
+ggplot(data = bikeshare, aes(x = ____, y = ____)) + 
+  geom_point() + 
+  labs(x = "______", 
+       y = "_______"
+       title = "______")
+```
+
 
 Use the scatterplot to describe how we expect the number of bike rentals to change as the temperature increases. 
 
